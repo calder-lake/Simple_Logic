@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 # Logical Processing Homework
@@ -56,7 +56,7 @@ influenza_genome = [19, 15, 7, 9, 12, 6, 17, 20, 29, 14, 22, 8, 15, 12, 21, 25, 
 # The function should create a modified version of the influenza_genome list as per 1.4, then print the section described in problem 2.3. 
 
 
-# In[ ]:
+# In[2]:
 
 
 #1.1 Print previous value at index 300 and add 1 to the value using an if statement then print the updated value in the list at index 300.
@@ -67,7 +67,7 @@ one_one= influenza_genome
 print(f"1.1=", one_one[300])
 
 
-# In[ ]:
+# In[3]:
 
 
 # 1.2 for the first 30 elements, if the value of the element is divisable by 3, multiply the value by 3.
@@ -82,7 +82,7 @@ one_two = influenza_genome[:30]
 print(f"influenza_genome[:30] is", one_two)
 
 
-# In[ ]:
+# In[4]:
 
 
 # 1.3 for the last 30 elements, if the index value at that point is divisable by 5, replace the value with "a".
@@ -97,7 +97,7 @@ one_three = influenza_genome[-30:]
 print(f"influenza_genome[-30:], is", one_three)
 
 
-# In[ ]:
+# In[5]:
 
 
 # 1.4 for all elements between index 200 and 300, if the value of the element is divisable by BOTH 3 AND 5, replace the value with the 10.
@@ -112,28 +112,30 @@ one_four = influenza_genome[200:301]
 print(f"influenza_genome[200:301], is", one_four)
 
 
-# In[ ]:
+# In[6]:
 
 
 # 2.1 Create a for loop that iterates over items index 234 through 237 and prints each value (ie there should be 4 items)
 #Use for loop to iterate over index and print each item
 for i in range (234, 238):
-    print(f"two_one:", influenza_genome[i])
+    two_one = influenza_genome[i]
+    print(f"two_one:", two_one)
 
 
 
-# In[ ]:
+# In[7]:
 
 
 # 2.2 Create a while loop that iterates over items index 234 through 237 and prints each value (ie there should be 4 items)
 #Use while loop to iterate over index and print each value. Use counter variable to stop the while loop.
 i = 0
 while i < 4:
-    print(f"two_two:", influenza_genome[234+i])
+    two_two = influenza_genome[234+i]
+    print(f"two_two:", two_two)
     i += 1
 
 
-# In[ ]:
+# In[8]:
 
 
 # 2.3 Create a for loop that iterates over items index 234 through 237 and if the index is 236 print the item 7 times.
@@ -141,12 +143,14 @@ while i < 4:
 for i in range (234, 238):
     if influenza_genome[i] == influenza_genome[236]:
         for i in range(7):
-            print(f"two_three:", influenza_genome[236])
+            two_three = influenza_genome[236]
+            print(f"two_three:", two_three)
     else:
-        print(f"two_three:", influenza_genome[i])
+        two_three = influenza_genome[i]
+        print(f"two_three:", two_three)
 
 
-# In[ ]:
+# In[9]:
 
 
 # 3.1 write a function, that takes in the array as an argument, and outputs 10 values from the dataset, spaced out by indexes that are 25 apart (ie 0, 25, 50, etc)
@@ -156,7 +160,7 @@ three_one = three_one(influenza_genome)
 print(f"three_one=", three_one)
 
 
-# In[ ]:
+# In[10]:
 
 
 # 3.2 write a function that takes in the dataset as an argument and outputs 20 values from the dataset, spaced out by indexes that are y apart (ie you can decide how far apart they should be iterated as long as they dont exceed the length of the dataset)
@@ -167,21 +171,26 @@ three_two = three_two(influenza_genome)
 print(f"three_two=", three_two)
 
 
-# In[ ]:
+# In[11]:
 
 
 # 3.3 write a function that takes the output from the function from 3.2 as an argument, then only prints out every other item (ie there should only be 10 outputs)
 def three_three(three_two):
     print(f"three_three=", three_two[0:20:2])
-three_three(three_two)
+three_three = three_three(three_two)
+three_three
 
 
-# In[ ]:
+# In[13]:
 
 
 # 4.1 Write a function that implements the code from problem 1.4, then implements the code from problem 2.3.
 #Replace values in the index 200-300 that are divisibly by 3 and 5 with 10, then print the indices 234-237, but print index 236 7 times.
 def four_one(influenza_genome):
+    """
+    Parameters: influenza_genome as input
+    Output: integer values at specified indices in order
+    """
     for i in range (200, 301):
         if (influenza_genome[i] % 5 == 0) and (influenza_genome[i] % 3 == 0):
             influenza_genome[i] = 10
@@ -193,7 +202,8 @@ def four_one(influenza_genome):
                 print(f"four_one:", influenza_genome[236])
         else:
             print(f"four_one:", influenza_genome[i])
-four_one(influenza_genome)
+four_one = four_one(influenza_genome)
+four_one
 
 
 
